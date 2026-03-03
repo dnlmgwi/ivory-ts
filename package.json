@@ -1,0 +1,75 @@
+{
+  "name": "ivory-orm",
+  "version": "1.0.0",
+  "description": "A PostgreSQL CRUD wrapper library with a fluent JavaScript/TypeScript API",
+  "main": "./dist/lib/ivory.js",
+  "types": "./dist/lib/ivory.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/ivory.d.ts",
+      "import": "./dist/lib/ivory.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"**/*.{ts,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,js,json,md}\"",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "validate": "npm run format:check && npm run lint && npm run type-check && npm run test"
+  },
+  "keywords": [
+    "postgresql",
+    "postgres",
+    "pg",
+    "orm",
+    "database",
+    "sql",
+    "query-builder",
+    "crud",
+    "typescript"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ivory-orm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ivory-orm/issues"
+  },
+  "homepage": "https://github.com/yourusername/ivory-orm#readme",
+  "peerDependencies": {
+    "pg": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.0",
+    "pg": "^8.16.3",
+    "prettier": "^3.2.0",
+    "typescript": "^5.7.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

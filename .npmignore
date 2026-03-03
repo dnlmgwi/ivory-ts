@@ -1,0 +1,19 @@
+# Source files
+lib/*.ts
+main.ts
+tsconfig.json
+
+# Development files
+node_modules
+images/
+.git
+.gitignore
+*.tsbuildinfo
+.DS_Store
+
+# Documentation (keep README.md)
+README-TS.md
+
+# Test files
+**/*.test.ts
+**/*.test.js
